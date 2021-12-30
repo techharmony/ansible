@@ -1,0 +1,10 @@
+---
+- name: Uninstalling Http
+  hosts: ansible_client
+  remote_user: root
+  become: true
+  tasks:
+          - name: Uninstall Http
+            yum:
+                    name: httpd
+                    state: absent
